@@ -1,7 +1,7 @@
 
 var scrollpos = window.scrollY;
 var header = document.getElementById("header");
-var navlinks = document.querySelectorAll(".lissy");
+var navlinks = document.getElementById("navLinks");
 var navcontent = document.getElementById("nav-content");
 var navaction = document.getElementById("navAction");
 var brandname = document.getElementById("brandname");
@@ -25,14 +25,16 @@ document.addEventListener("scroll", function () {
     header.classList.add("shadow");
     navcontent.classList.remove("bg-gray-100");
     navcontent.classList.add("bg-white");
-    navlinks.classList.remove("lissy");
-    navlinks.classList.add("text-white");
+    navlinks.classList.remove("text-white");
+    navlinks.classList.add("lissy");
   } else {
     header.classList.remove("bg-white");
     navaction.classList.remove("but");
     navaction.classList.add("bg-white");
     navaction.classList.remove("text-white");
     navaction.classList.add("text-gray-900");
+    navlinks.classList.remove("lissy");
+    navlinks.classList.add("text-white");
     //Use to switch toggleColour colours
     for (var i = 0; i < toToggle.length; i++) {
       toToggle[i].classList.add("text-white");
