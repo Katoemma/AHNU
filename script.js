@@ -82,3 +82,10 @@ function checkParent(t, elm) {
   }
   return false;
 }
+
+var year = document.getElementById("yeary");
+var today = new Date();
+
+if (today.getFullYear() > 2023) {
+    year.innerText = today.getFullYear(); 
+}
